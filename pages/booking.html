@@ -1,9 +1,80 @@
+
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> Booking </title>
-    </head>
-    <body>
-        <h1>This is Booking page</h1>
-    </body>
+<head>
+    <title>Hotel Booking Form</title>
+</head>
+<body >
+    <center>
+        <img src=../images/booknow.webp width="300" height="150" ><h2><b><u>Book your stay here!</u></b></h2>
+    </center>
+    <form>
+        <fieldset>
+            <legend><b>Personal Information</b></legend>
+            <table cellpadding="5">
+                <tr>
+                    <td>First Name:</td>
+                    <td><input type="text" name="fname" required></td>
+                    <td>Last Name:</td>
+                    <td><input type="text" name="lname" required></td>
+                </tr>
+                <tr>
+                    <td>E-Mail:</td>
+                    <td><input type="email" name="email" required></td>
+                    <td>Mobile No:</td>
+                    <td><input type="tel" name="mobile" required></td>
+                </tr>
+            </table>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend><b>Booking Details</b></legend>
+            <table cellpadding="5">
+                <tr>
+                    <td>Entry Date:</td>
+                    <td><input type="date" name="entrydate" required></td>
+                </tr>
+                <tr>
+                    <td>Leave Date:</td>
+                    <td><input type="date" name="leavedate" required></td>
+                </tr>
+                <tr>
+                    <td>Number of People:</td>
+                    <td><input type="number" name="people" min="1" max="10" value="1"></td>
+                </tr>
+                <tr>
+                    <td>Room Type:</td>
+                    <td>
+                        <input type="radio" name="room" value="single">Ac room
+                        <input type="radio" name="room" value="double">Without AC
+                    </td>
+                </tr>
+                <tr>
+                    <td>Additional Message:</td>
+                    <td><textarea name="message" rows="4" cols="30" placeholder="Write your message here..."></textarea></td>
+                </tr>
+            </table>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend><b>Payment Details</b></legend>
+            <table >
+                <tr>
+                    <td>Payment Method:</td>
+                    <td>
+                        <input type="radio" name="payment" value="Google Pay"> Google Pay<br>
+                        <input type="radio" name="payment" value="PhonePe"> PhonePe<br>
+                        <input type="radio" name="payment" value="Credit Card"> Credit Card<br>
+                        <input type="radio" name="payment" value="Cash"> Cash
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <br>
+        <center>
+            <input type="submit" value="Book Now">
+            <input type="reset" value="Clear Form">
+        </center>
+    </form>
+</body>
 </html>
